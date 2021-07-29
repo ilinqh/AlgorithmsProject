@@ -1,23 +1,28 @@
-val result = IntArray(8)
-
-fun main(args: Array<String>) {
-    cal8queen(0)
+class Solution {
+    fun solveNQueens(n: Int): List<List<String>> {
+        val result = IntArray(n)
+        return cal8queen(result, 0)
+    }
 }
 
-private fun cal8queen(row: Int) {
+private fun cal8queen(result: IntArray, row: Int): ArrayList<ArrayList<String>> {
+    val resultList = ArrayList<ArrayList<String>>()
     if (row == result.size) {
-        printQueens()
-        return
+        resultList.add(printQueens(result))
     }
     for (column in result.indices) {
-        if (isOk(row, column)) {
+        if (isOk(result, row, column)) {
             result[row] = column
-            cal8queen(row + 1)
+            val tempList = cal8queen(result, row + 1)
+            if (tempList.isNotEmpty()) {
+                resultList.addAll(tempList)
+            }
         }
     }
+    return resultList
 }
 
-private fun isOk(row: Int, column: Int): Boolean {
+private fun isOk(result: IntArray, row: Int, column: Int): Boolean {
     var leftUp = column - 1
     var rightUp = column + 1
     for (i in (row - 1) downTo 0) {
@@ -40,17 +45,19 @@ private fun isOk(row: Int, column: Int): Boolean {
     return true
 }
 
-private fun printQueens() {
+private fun printQueens(result: IntArray): ArrayList<String> {
+    val strList = arrayListOf<String>()
+    val rowStr = StringBuffer()
     for (row in result.indices) {
         for (column in result.indices) {
             if (result[row] == column) {
-                print("Q ")
+                rowStr.append("Q")
             } else {
-                print("* ")
+                rowStr.append(".")
             }
         }
-        println()
+        strList.add(rowStr.toString())
+        rowStr.setLength(0)
     }
-    println("----------------")
+    return strList
 }
-
