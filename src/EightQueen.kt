@@ -1,14 +1,16 @@
 class Solution {
     fun solveNQueens(n: Int): List<List<String>> {
         val result = IntArray(n)
-        return cal8queen(result, 0)
+
+        return cal8queen(result, 0) ?: ArrayList()
     }
 }
 
 private fun cal8queen(result: IntArray, row: Int): ArrayList<ArrayList<String>> {
     val resultList = ArrayList<ArrayList<String>>()
     if (row == result.size) {
-        resultList.add(printQueens(result))
+        val queenList = printQueens(result)
+        resultList.add(queenList)
     }
     for (column in result.indices) {
         if (isOk(result, row, column)) {
