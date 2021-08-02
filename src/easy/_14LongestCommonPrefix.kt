@@ -2,6 +2,9 @@ package easy
 
 import kotlin.math.min
 
+/**
+ * 数据量不大的前提下，用双层 for 循环更加高效
+ */
 class LongestCommonPrefixSolution {
     private lateinit var strList: Array<String>
     fun longestCommonPrefix(strs: Array<String>): String {
