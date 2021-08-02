@@ -1,4 +1,4 @@
-class Solution {
+class EightQueenSolution {
     private lateinit var result: IntArray
     private val resultList = ArrayList<ArrayList<String>>()
 
