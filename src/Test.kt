@@ -9,10 +9,12 @@ fun main() {
     max = Math.max(sum, max);
     [-2,1,-3,4,-1,2,1,-5,4]
     }
+    "mississippi"
+    "issip"
     return max;
      */
-    val solution = _53MaximumSubarray.Solution()
-    val solve = solution.maxSubArray(intArrayOf(-1, -10))
+    val solution = _35SearchInsertPosition.BestSolution()
+    val solve = solution.searchInsert(intArrayOf(1, 3, 3, 3, 3, 5), 3)
     println(solve)
 //    solve.forEach {
 //        println(it)
