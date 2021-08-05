@@ -1,4 +1,4 @@
-class ListNode(var value: Int) {
+class ListNode(var `val`: Int) {
     var next: ListNode? = null
 }
 
@@ -16,7 +16,7 @@ fun listNodeToArray(tempList: ListNode?): IntArray {
     val intArray = ArrayList<Int>()
     var listNode = tempList
     while (listNode != null) {
-        intArray.add(listNode.value)
+        intArray.add(listNode.`val`)
         listNode = listNode.next
     }
     return intArray.toIntArray()
