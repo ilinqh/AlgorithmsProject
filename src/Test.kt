@@ -1,21 +1,14 @@
-import easy.*
+import medium._2AddTwoNumbers
 
 fun main() {
-    /**
-     *     int sum = 0;
-    int max = Integer.MIN_VALUE;
-    for(int i = 0; i < nums.length; ++i) {
-    sum = Math.max(nums[i], sum + nums[i]);
-    max = Math.max(sum, max);
-    [-2,1,-3,4,-1,2,1,-5,4]
+
+    val solution = _2AddTwoNumbers.Solution()
+    val firstListNode = arrayToListNode(intArrayOf(2, 4, 3))
+    val secondListNode = arrayToListNode(intArrayOf(5, 6, 4))
+    val solve = solution.addTwoNumbers(firstListNode, secondListNode)
+    listNodeToArray(solve).forEach {
+        print(it)
     }
-    "mississippi"
-    "issip"
-    return max;
-     */
-    val solution = _35SearchInsertPosition.BestSolution()
-    val solve = solution.searchInsert(intArrayOf(1, 3, 3, 3, 3, 5), 3)
-    println(solve)
 //    solve.forEach {
 //        println(it)
 //    }
