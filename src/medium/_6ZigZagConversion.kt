@@ -24,4 +24,30 @@ class _6ZigZagConversion {
             return sb.toString()
         }
     }
+
+    // Best
+
+    class BestSolution {
+        fun convert(s: String, numRows: Int): String {
+            if (numRows == 1) {
+                return s
+            }
+
+            val result = CharArray(s.length)
+            var index = 0
+            val internal = numRows - 1
+            for (i in 0 until numRows) {
+                var j = i
+
+                while (j < s.length) {
+                    result[index] = s[j]
+                    j += 2 * (internal - j % internal)
+                    index++
+                }
+            }
+
+            return String(result)
+        }
+    }
+
 }

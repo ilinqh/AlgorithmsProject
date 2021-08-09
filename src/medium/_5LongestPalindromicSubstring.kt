@@ -35,4 +35,52 @@ class _5LongestPalindromicSubstring {
             return s.substring(maxLeft / 2, (maxLeft + maxCount) / 2)
         }
     }
+
+    // Best
+
+    class BestSolution {
+        fun longestPalindrome(s: String): String {
+            var start = 0
+            var maxLength = 0
+            if (s.length < 2) {
+                return s
+            }
+
+            val chars = s.toCharArray()
+            val length = chars.size
+
+            var i = 0
+            while (i < length) {
+                // 如果剩余长度和小于等于最长子串，就没必要再比较了
+                if ((length - i) <= maxLength / 2) {
+                    break
+                }
+
+                var left = i
+                var right = i
+                // 第一步 向右寻找相同的字符串
+                while (right < length - 1 && chars[right] == chars[right + 1]) {
+                    // 继续向右寻找
+                    right++
+                }
+                var goNext = false
+                while (right < length - 1 && left > 0 && chars[right + 1] == chars[left - 1]) {
+                    right++
+                    left--
+                    goNext = true
+                }
+                if (right - left + 1 > maxLength) {
+                    maxLength = right - left + 1
+                    start = left
+                }
+                if (!goNext) {
+                    i = right + 1
+                } else {
+                    i++
+                }
+            }
+
+            return s.substring(start, start + maxLength)
+        }
+    }
 }

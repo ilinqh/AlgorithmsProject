@@ -8,6 +8,7 @@ class _8StringToInteger {
             return 0
         }
     }
+
     // Best 状态机思想
 
     class BestSolution {
