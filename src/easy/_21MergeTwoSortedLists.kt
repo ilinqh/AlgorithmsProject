@@ -1,8 +1,6 @@
 package easy
 
-class ListNode(var `val`: Int) {
-    var next: ListNode? = null
-}
+import ListNode
 
 class _21MergeTwoSortedLists {
     class Solution {
