@@ -6,13 +6,13 @@ class _16ThreeSumClosest {
 class Solution {
     fun threeSumClosest(nums: IntArray, target: Int): Int {
         if (nums.size < 3) {
-            return Int.MIN_VALUE
+            return Int.MAX_VALUE
         }
         if (nums.size == 3) {
             return nums[0] + nums[1] + nums[2]
         }
         Arrays.sort(nums)
-        var closestTarget = Int.MIN_VALUE
+        var closestTarget = Int.MAX_VALUE
         var secondPointIndex: Int
         var thirdPointIndex: Int
         for (x in nums.indices) {
