@@ -5,7 +5,54 @@ class _8StringToInteger {
 
     class Solution {
         fun myAtoi(str: String): Int {
-            return 0
+            val automaton = Automaton()
+            for (item in str) {
+                automaton[item]
+            }
+            return (automaton.sign * automaton.ans).toInt()
+        }
+
+        class Automaton {
+            var sign = 1
+            var ans = 0L
+            private var state = "start"
+            private val map = object : HashMap<String, Array<String>>() {
+                init {
+                    put("start", arrayOf("start", "sign", "in_number", "end"))
+                    put("sign", arrayOf("end", "end", "in_number", "end"))
+                    put("in_number", arrayOf("end", "end", "in_number", "end"))
+                    put("end", arrayOf("end", "end", "end", "end"))
+                }
+            }
+
+            operator fun get(c: Char) {
+                state = map[state]!![getCol(c)]
+                if (state == "sign") {
+                    sign = if (c == '+') {
+                        1
+                    } else {
+                        -1
+                    }
+                } else if (state == "in_number") {
+                    ans = ans * 10 + c.code.toLong() - '0'.code.toLong()
+                    ans = if (sign == 1) {
+                        Math.min(ans, Int.MAX_VALUE.toLong())
+                    } else {
+                        Math.min(ans, -Int.MIN_VALUE.toLong())
+                    }
+                }
+            }
+
+            private fun getCol(c: Char): Int {
+                if (c == ' ') {
+                    return 0
+                } else if (c == '+' || c == '-') {
+                    return 1
+                } else if (Character.isDigit(c)) {
+                    return 2
+                }
+                return 3
+            }
         }
     }
 
