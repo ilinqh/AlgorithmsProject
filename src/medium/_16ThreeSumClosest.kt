@@ -6,13 +6,13 @@ class _16ThreeSumClosest {
 class Solution {
     fun threeSumClosest(nums: IntArray, target: Int): Int {
         if (nums.size < 3) {
-            return Int.MAX_VALUE
+            return 1000000
         }
         if (nums.size == 3) {
             return nums[0] + nums[1] + nums[2]
         }
         Arrays.sort(nums)
-        var closestTarget = Int.MAX_VALUE
+        var closestTarget = 1000000
         var secondPointIndex: Int
         var thirdPointIndex: Int
         for (x in nums.indices) {
@@ -22,30 +22,29 @@ class Solution {
             secondPointIndex = x + 1
             thirdPointIndex = nums.size - 1
             while (secondPointIndex < thirdPointIndex) {
+                val sum = nums[x] + nums[secondPointIndex] + nums[thirdPointIndex]
+                if (sum == target) {
+                    return sum
+                }
                 val delta = nums[x] + nums[secondPointIndex] + nums[thirdPointIndex] - target
                 if (Math.abs(delta) < Math.abs(closestTarget - target)) {
-                    closestTarget = nums[x] + nums[secondPointIndex] + nums[thirdPointIndex]
-                    secondPointIndex++
-                } else {
-                    break
+                    closestTarget = sum
                 }
-            }
-            for (y in secondPointIndex until nums.size) {
-                if ((y - secondPointIndex) > 0 && nums[y] == nums[y - 1]) {
-                    continue
-                }
-                while (y < thirdPointIndex) {
-                    val delta = nums[x] + nums[y] + nums[thirdPointIndex] - target
-                    if (Math.abs(delta) < Math.abs(closestTarget - target)) {
-                        closestTarget = nums[x] + nums[secondPointIndex] + nums[thirdPointIndex]
-                        thirdPointIndex--
-                    } else {
-                        break
+                if (sum > target) {
+                    var tempThird = thirdPointIndex - 1
+                    while (tempThird > secondPointIndex && nums[tempThird] == nums[thirdPointIndex]) {
+                        tempThird--
                     }
+                    thirdPointIndex = tempThird
+                } else {
+                    var tempSecond = secondPointIndex + 1
+                    while (tempSecond < thirdPointIndex && nums[tempSecond] == nums[secondPointIndex]) {
+                        tempSecond++
+                    }
+                    secondPointIndex = tempSecond
                 }
             }
         }
-
         return closestTarget
     }
 }
