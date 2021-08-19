@@ -15,4 +15,25 @@ class _100SameTree {
             return isSameTree(p.left, q.left) && isSameTree(p.right, q.right)
         }
     }
+
+    // Best
+
+    class BestSolution {
+        private fun dfs(p: TreeNode?, q: TreeNode?): Boolean {
+            return if (p != null && q != null) {
+                if (p.`val` == q.`val`) {
+                    dfs(p.left, q.left) && dfs(p.right, q.right)
+                } else {
+                    false
+                }
+            } else {
+                p == q
+            }
+        }
+
+        fun isSameTree(p: TreeNode?, q: TreeNode?): Boolean {
+            return dfs(p, q)
+
+        }
+    }
 }

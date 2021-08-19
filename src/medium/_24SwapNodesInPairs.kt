@@ -22,4 +22,22 @@ class _24SwapNodesInPairs {
             return dummyHead.next
         }
     }
+
+    // Best
+
+    class BestSolution {
+        fun swapPairs(head: ListNode?): ListNode? {
+            //终止条件
+            if (head?.next == null) {
+                return head
+            }
+
+            val next = head.next
+            //单次要执行  1head指向交换后的节点  2next指向head
+            head.next = swapPairs(next?.next)
+            next?.next = head
+            return next
+        }
+    }
+
 }
