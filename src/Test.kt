@@ -17,8 +17,7 @@ fun main() {
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
 //    val solve = solution.threeSumClosest(intArrayOf(1, 1, -1, -1, 3), -1)
 //    val solve = solution.fourSum(intArrayOf(1, 0, -1, 0, -2, 2), 0)
-    val solve = solution.search(intArrayOf(4,5,6,7,0,1,2), 4)
-    intArrayOf(1, 2, 3)
+    val solve = solution.search(intArrayOf(3, 1), 1)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
