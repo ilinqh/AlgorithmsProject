@@ -8,7 +8,7 @@ fun main() {
 //    rightNode.left = leftNode
 //    root.right = rightNode
 
-    val solution = _443StringCompression.Solution()
+    val solution = _78Subsets.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 1, 2, 2, 9, 9, 9, 10, 11, 12)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(5, 6))
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
@@ -23,8 +23,8 @@ fun main() {
     array[2] = intArrayOf(9, 10, 11, 12)
     array[3] = intArrayOf(13, 14, 15, 16)
     val listNode = arrayToListNode(intArrayOf(1,2,3,4,5))
-    val solve = solution.compress(charArrayOf('a','a','b','b','c','c','c'))
-    print(solve)
+    val solve = solution.subsets(intArrayOf(1, 2, 3))
+//    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
@@ -32,9 +32,9 @@ fun main() {
 //    listNodeToArray(solve).forEach {
 //        print(it)
 //    }
-//    solve.forEach {
-//        print(it)
-//    }
+    solve.forEach {
+        print(it)
+    }
 //    solve.forEach {
 //        it.forEach { i ->
 //            print(i)
