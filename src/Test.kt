@@ -1,3 +1,4 @@
+import easy._155MinStack
 import easy._1646GetMaximumInGeneratedArray
 import medium.*
 
@@ -30,7 +31,7 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val solve = solution.findCheapestPrice(3, arrayOf(intArrayOf(1, 0, 50), intArrayOf(1, 2, 100), intArrayOf(0, 2, 30)), 1, 2, 1)
-    print(solve)
+//    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
@@ -46,4 +47,13 @@ fun main() {
 //            print(i)
 //        }
 //    }
+
+    val minStack = _155MinStack.MinStack()
+    minStack.push(-2)
+    minStack.push(0)
+    minStack.push(-3)
+    minStack.getMin()
+    minStack.pop()
+    minStack.top()
+    minStack.getMin()
 }
