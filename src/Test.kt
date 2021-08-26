@@ -1,5 +1,6 @@
 import easy._155MinStack
 import easy._1646GetMaximumInGeneratedArray
+import easy._169MajorityElement
 import medium.*
 
 fun main() {
@@ -10,7 +11,7 @@ fun main() {
 //    rightNode.left = leftNode
 //    root.right = rightNode
 
-    val solution = _787CheapestFlightsWithinKStops.BestSolution()
+    val solution = _169MajorityElement.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 1, 2, 2, 9, 9, 9, 10, 11, 12)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(5, 6))
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
@@ -30,8 +31,8 @@ fun main() {
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
     src = 0, dst = 2, k = 1
      */
-    val solve = solution.findCheapestPrice(3, arrayOf(intArrayOf(1, 0, 50), intArrayOf(1, 2, 100), intArrayOf(0, 2, 30)), 1, 2, 1)
-//    print(solve)
+    val solve = solution.majorityElement(intArrayOf(6, 5, 5))
+    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
@@ -47,13 +48,4 @@ fun main() {
 //            print(i)
 //        }
 //    }
-
-    val minStack = _155MinStack.MinStack()
-    minStack.push(-2)
-    minStack.push(0)
-    minStack.push(-3)
-    minStack.getMin()
-    minStack.pop()
-    minStack.top()
-    minStack.getMin()
 }
