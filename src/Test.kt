@@ -1,7 +1,4 @@
-import easy._155MinStack
-import easy._1646GetMaximumInGeneratedArray
-import easy._169MajorityElement
-import easy._231PowerOfTwo
+import easy.*
 import medium.*
 
 fun main() {
@@ -12,7 +9,7 @@ fun main() {
 //    rightNode.left = leftNode
 //    root.right = rightNode
 
-    val solution = _231PowerOfTwo.Solution()
+    val solution = _1588SumOfAllOddLengthSubarrays.BaseSolution()
     val firstListNode = arrayToListNode(intArrayOf(1, 1, 2, 2, 9, 9, 9, 10, 11, 12)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(5, 6))
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
@@ -32,7 +29,7 @@ fun main() {
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
     src = 0, dst = 2, k = 1
      */
-    val solve = solution.isPowerOfTwo(3)
+    val solve = solution.sumOddLengthSubarrays(intArrayOf(1, 4, 2, 5, 3))
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
