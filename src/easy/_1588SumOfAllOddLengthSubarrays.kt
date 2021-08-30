@@ -19,7 +19,7 @@ class _1588SumOfAllOddLengthSubarrays {
         }
     }
 
-    class BaseSolution {
+    class BestSolution {
         fun sumOddLengthSubarrays(arr: IntArray): Int {
             var answer = 0
             val length = arr.size
