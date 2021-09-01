@@ -6,9 +6,30 @@ class _43MultiplyStrings {
             if (num1 == "0" || num2 == "0") {
                 return "0"
             }
-            return ""
+            val sb = StringBuffer()
+            val length1 = num1.length
+            val length2 = num2.length
+            val answerArr = IntArray(length1 + length2)
+            for (i in (length1 - 1) downTo 0) {
+                val x = num1[i] - '0'
+                for (j in (length2 - 1) downTo 0) {
+                    val y = num2[j] - '0'
+                    answerArr[i + j + 1] += x * y
+                }
+            }
+            for (i in (length1 + length2 - 1) downTo 1) {
+                answerArr[i - 1] += answerArr[i] / 10
+                answerArr[i] = answerArr[i] % 10
+            }
+            var k = if (answerArr[0] == 0) 1 else 0
+            while (k < (length1 + length2)) {
+                sb.append(answerArr[k])
+                k++
+            }
+            return sb.toString()
         }
     }
+
     class BestSolution {
         fun multiply(num1: String, num2: String): String {
             if (num1 == "0" || num2 == "0") {
