@@ -11,7 +11,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = Offer_22KLCOF.Solution()
+    val solution = _124BinaryTreeMaximumPathSum.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -32,8 +32,8 @@ fun main() {
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
     src = 0, dst = 2, k = 1
      */
-    val solve = solution.getKthFromEnd(firstListNode, 0)
-    print(solve.`val`)
+    val solve = solution.maxPathSum(root)
+    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 

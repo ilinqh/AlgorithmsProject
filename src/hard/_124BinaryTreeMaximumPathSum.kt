@@ -4,30 +4,25 @@ import TreeNode
 
 class _124BinaryTreeMaximumPathSum {
     class Solution {
-        private var result = Int.MIN_VALUE
-        private val dp = ArrayList<Int>()
+        var maxSum = Int.MIN_VALUE
+
         fun maxPathSum(root: TreeNode?): Int {
-            if (root == null) {
-                return -1000
-            }
-            dfs(root)
-            result = Math.max(result, dp[0])
-            for (i in 1 until dp.size) {
-                if (dp[i - 1] > 0) {
-                    dp[i] += dp[i - 1]
-                }
-                result = Math.max(result, dp[i])
-            }
-            return result
+            maxGain(root)
+            return maxSum
         }
 
-        private fun dfs(root: TreeNode?) {
+        private fun maxGain(root: TreeNode?): Int {
             if (root == null) {
-                return
+                return 0
             }
-            dfs(root.left)
-            dp.add(root.`val`)
-            dfs(root.right)
+
+            val leftGain = Math.max(0, maxGain(root.left))
+            val rightGain = Math.max(0, maxGain(root.right))
+
+            val priceNewPath = leftGain + root.`val` + rightGain
+            maxSum = Math.max(maxSum, priceNewPath)
+
+            return root.`val` + Math.max(leftGain, rightGain)
         }
     }
 }
