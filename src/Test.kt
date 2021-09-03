@@ -12,7 +12,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _1714SmallestKLCCI.BestSolution()
+    val solution = _45JumpGameII.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -33,8 +33,8 @@ fun main() {
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
     src = 0, dst = 2, k = 1
      */
-    val solve = solution.smallestK(intArrayOf(1,3,5,7,2,4,6,8), 4)
-//    print(solve)
+    val solve = solution.jump(intArrayOf(2,3,2,4,4, 1, 1,1,1))
+    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
@@ -42,9 +42,9 @@ fun main() {
 //    listNodeToArray(solve).forEach {
 //        print(" $it ")
 //    }
-    solve.forEach {
-        print(" $it ")
-    }
+//    solve.forEach {
+//        print(" $it ")
+//    }
 //    solve.forEach {
 //        it.forEach { i ->
 //            print(i)
