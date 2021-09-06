@@ -1,8 +1,6 @@
-import coding_interviews.Offer_10ILCOF
-import coding_interviews.Offer_22KLCOF
-import easy.*
-import hard._124BinaryTreeMaximumPathSum
-import medium.*
+import medium._49GroupAnagrams
+import medium._50PowXN
+import medium._55JumpGame
 
 fun main() {
 
@@ -12,7 +10,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _48RotateImage.Solution()
+    val solution = _55JumpGame.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -40,7 +38,8 @@ fun main() {
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
     src = 0, dst = 2, k = 1
      */
-    val solve = solution.rotate(array)
+    val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
+    val solve = solution.canJump(intArrayOf(3, 0, 8, 2, 0, 0, 1))
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
@@ -54,7 +53,8 @@ fun main() {
 //    }
 //    solve.forEach {
 //        it.forEach { i ->
-//            print(i)
+//            print(" $i ")
 //        }
+//        println()
 //    }
 }
