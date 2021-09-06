@@ -1,6 +1,4 @@
-import medium._49GroupAnagrams
-import medium._50PowXN
-import medium._55JumpGame
+import medium.*
 
 fun main() {
 
@@ -10,7 +8,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _55JumpGame.Solution()
+    val solution = _64MinimumPathSum.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -25,13 +23,16 @@ fun main() {
     nodeArray[1] = secondListNode
     nodeArray[2] = thirdListNode
 
-    val array = Array(4) {
-        IntArray(4)
+    val array = Array(3) {
+        IntArray(2)
     }
-    array[0] = intArrayOf(1, 2, 3, 4)
-    array[1] = intArrayOf(5, 6, 7, 8)
-    array[2] = intArrayOf(9, 10, 11, 12)
-    array[3] = intArrayOf(13, 14, 15, 16)
+//    array[0] = intArrayOf(1, 2, 3, 4)
+//    array[1] = intArrayOf(5, 6, 7, 8)
+//    array[2] = intArrayOf(9, 10, 11, 12)
+//    array[3] = intArrayOf(13, 14, 15, 16)
+    array[0] = intArrayOf(1, 2)
+    array[1] = intArrayOf(5, 6)
+    array[2] = intArrayOf(1, 1)
     val listNode = arrayToListNode(intArrayOf(1, 2, 3, 4, 5))
 
     /**
@@ -39,7 +40,7 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
-    val solve = solution.canJump(intArrayOf(3, 0, 8, 2, 0, 0, 1))
+    val solve = solution.minPathSum(array)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
