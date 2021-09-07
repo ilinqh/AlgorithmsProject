@@ -9,7 +9,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _71SimplifyPath.Solution()
+    val solution = _73SetMatrixZeroes.BestSolution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -25,15 +25,17 @@ fun main() {
     nodeArray[2] = thirdListNode
 
     val array = Array(3) {
-        IntArray(2)
+        IntArray(3)
     }
 //    array[0] = intArrayOf(1, 2, 3, 4)
 //    array[1] = intArrayOf(5, 6, 7, 8)
 //    array[2] = intArrayOf(9, 10, 11, 12)
 //    array[3] = intArrayOf(13, 14, 15, 16)
-    array[0] = intArrayOf(1, 2)
-    array[1] = intArrayOf(5, 6)
-    array[2] = intArrayOf(1, 1)
+    array[0] = intArrayOf(0,1,2,0)
+    array[1] = intArrayOf(3,4,5,2)
+    array[2] = intArrayOf(1,3,1,5)
+//    array[1] = intArrayOf(5, 6)
+//    array[2] = intArrayOf(1, 1)
     val listNode = arrayToListNode(intArrayOf(1, 2, 3, 4, 5))
 
     /**
@@ -41,7 +43,7 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
-    val solve = solution.simplifyPath("/a/./b/../../c/")
+    val solve = solution.setZeroes(array)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
