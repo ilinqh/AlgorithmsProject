@@ -13,6 +13,8 @@ class _74SearchA2DMatrix {
                 val middleRow = top + (bottom - top) shr 1
                 if (matrix[middleRow][0] > target) {
                     bottom = middleRow - 1
+                } else if (matrix[middleRow][columnCount - 1] < target) {
+                    top = middleRow + 1
                 }
             }
             return false
