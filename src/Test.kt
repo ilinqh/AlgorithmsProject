@@ -9,7 +9,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _73SetMatrixZeroes.BestSolution()
+    val solution = _74SearchA2DMatrix.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -24,16 +24,16 @@ fun main() {
     nodeArray[1] = secondListNode
     nodeArray[2] = thirdListNode
 
-    val array = Array(3) {
-        IntArray(3)
+    val array = Array(1) {
+        IntArray(4)
     }
 //    array[0] = intArrayOf(1, 2, 3, 4)
 //    array[1] = intArrayOf(5, 6, 7, 8)
 //    array[2] = intArrayOf(9, 10, 11, 12)
 //    array[3] = intArrayOf(13, 14, 15, 16)
-    array[0] = intArrayOf(0,1,2,0)
-    array[1] = intArrayOf(3,4,5,2)
-    array[2] = intArrayOf(1,3,1,5)
+    array[0] = intArrayOf(1,3)
+//    array[1] = intArrayOf(10,11,16,20)
+//    array[2] = intArrayOf(23,30,34,60)
 //    array[1] = intArrayOf(5, 6)
 //    array[2] = intArrayOf(1, 1)
     val listNode = arrayToListNode(intArrayOf(1, 2, 3, 4, 5))
@@ -43,7 +43,7 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
-    val solve = solution.setZeroes(array)
+    val solve = solution.searchMatrix(array, 3)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2

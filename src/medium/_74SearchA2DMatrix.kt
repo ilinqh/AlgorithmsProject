@@ -5,23 +5,20 @@ class _74SearchA2DMatrix {
         fun searchMatrix(matrix: Array<IntArray>, target: Int): Boolean {
             val rowCount = matrix.size
             val columnCount = matrix[0].size
-            var top = 0
-            var bottom = rowCount - 1
-            var left = 0
-            var right = columnCount - 1
-            while (top <= bottom) {
-                val middleRow = top + (bottom - top) shr 1
-                if (matrix[middleRow][0] > target) {
-                    bottom = middleRow - 1
-                } else if (matrix[middleRow][columnCount - 1] < target) {
-                    top = middleRow + 1
+            var low = 0
+            var high = rowCount * columnCount - 1
+            while (low <= high) {
+                val middle = low + ((high - low) shr 1)
+                val item = matrix[middle / columnCount][middle % columnCount]
+                if (item == target) {
+                    return true
+                } else if (item > target) {
+                    high = middle - 1
+                } else {
+                    low = middle + 1
                 }
             }
             return false
-        }
-
-        private fun searchInRow() {
-
         }
     }
 }
