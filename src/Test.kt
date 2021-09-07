@@ -1,3 +1,4 @@
+import easy._1221SplitAStringInBalancedStrings
 import medium.*
 
 fun main() {
@@ -8,7 +9,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _64MinimumPathSum.Solution()
+    val solution = _71SimplifyPath.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -40,7 +41,7 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
-    val solve = solution.minPathSum(array)
+    val solve = solution.simplifyPath("/a/./b/../../c/")
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
