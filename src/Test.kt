@@ -10,7 +10,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _502IPO.Solution()
+    val solution = _77Combinations.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -44,7 +44,7 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
-    val solve = solution.findMaximizedCapital(2, 0, intArrayOf(1, 2, 3), intArrayOf(0, 1, 1))
+    val solve = solution.combine(4, 2)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2

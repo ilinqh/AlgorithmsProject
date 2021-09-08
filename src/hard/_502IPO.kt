@@ -18,7 +18,7 @@ class _502IPO {
             for (i in 0 until k) {
                 while (current < length && arr[current][0] <= tempW) {
                     pq.add(arr[current][1])
-                    ++current
+                    current += 1
                 }
                 if (pq.isNotEmpty()) {
                     tempW += pq.poll()
