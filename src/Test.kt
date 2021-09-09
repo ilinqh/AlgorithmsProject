@@ -10,7 +10,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _77Combinations.Solution()
+    val solution = _79WordSearch.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -44,7 +44,15 @@ fun main() {
     src = 0, dst = 2, k = 1
      */
     val strs: Array<String> = arrayOf<String>("eat", "tea", "tan", "ate", "nat", "bat")
-    val solve = solution.combine(4, 2)
+//    [['A','B','C','E'],['S','F','C','S'],['A','D','E','E']], word = "ABCCED"
+    val board =
+        arrayOf(
+            charArrayOf('A', 'B', 'C', 'E'),
+            charArrayOf('S', 'F', 'C', 'S'),
+            charArrayOf('A', 'D', 'E', 'E'),
+        )
+    val word = "ABCESCF"
+    val solve = solution.exist(board, word)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
