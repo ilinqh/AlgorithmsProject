@@ -10,8 +10,8 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _79WordSearch.Solution()
-    val firstListNode = arrayToListNode(intArrayOf(1, 4, 5)) ?: ListNode(1)
+    val solution = _86PartitionList.Solution()
+    val firstListNode = arrayToListNode(intArrayOf(1,4,3,2,5,2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
@@ -52,15 +52,15 @@ fun main() {
             charArrayOf('A', 'D', 'E', 'E'),
         )
     val word = "ABCESCF"
-    val solve = solution.exist(board, word)
-    print(solve)
+    val solve = solution.partition(firstListNode, 3)
+//    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
 
-//    listNodeToArray(solve).forEach {
-//        print(" $it ")
-//    }
+    listNodeToArray(solve).forEach {
+        print(" $it ")
+    }
 //    solve.forEach {
 //        print(" $it ")
 //    }
