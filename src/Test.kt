@@ -10,7 +10,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _86PartitionList.Solution()
+    val solution = _90SubsetsII.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1,4,3,2,5,2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -52,22 +52,22 @@ fun main() {
             charArrayOf('A', 'D', 'E', 'E'),
         )
     val word = "ABCESCF"
-    val solve = solution.partition(firstListNode, 3)
+    val solve = solution.subsetsWithDup(intArrayOf(1))
 //    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
 
-    listNodeToArray(solve).forEach {
-        print(" $it ")
-    }
-//    solve.forEach {
+//    listNodeToArray(solve).forEach {
 //        print(" $it ")
 //    }
 //    solve.forEach {
-//        it.forEach { i ->
-//            print(" $i ")
-//        }
-//        println()
+//        print(" $it ")
 //    }
+    solve.forEach {
+        it.forEach { i ->
+            print(" $i ")
+        }
+        println()
+    }
 }
