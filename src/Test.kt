@@ -11,7 +11,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _600NonNegativeIntegersWithoutConsecutiveOnes.Solution()
+    val solution = _97InterleavingString.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1,4,3,2,5,2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -53,7 +53,7 @@ fun main() {
             charArrayOf('A', 'D', 'E', 'E'),
         )
     val word = "ABCESCF"
-    val solve = solution.findIntegers(1)
+    val solve = solution.isInterleave("aabcc", "dbbca", "aadbbcbcac")
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
