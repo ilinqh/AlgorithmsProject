@@ -11,7 +11,7 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _93RestoreIPAddresses.Solution()
+    val solution = _162FindPeakElement.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1,4,3,2,5,2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -53,7 +53,7 @@ fun main() {
             charArrayOf('A', 'D', 'E', 'E'),
         )
     val word = "ABCESCF"
-    val solve = solution.restoreIpAddresses("111111111111")
+    val solve = solution.findPeakElement(intArrayOf(1, 2, 3, 1))
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
