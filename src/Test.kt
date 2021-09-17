@@ -1,7 +1,4 @@
-import easy._1221SplitAStringInBalancedStrings
-import hard._502IPO
-import hard._600NonNegativeIntegersWithoutConsecutiveOnes
-import medium.*
+import medium._36ValidSudoku
 
 fun main() {
 
@@ -11,8 +8,8 @@ fun main() {
     root.left = rightNode
 //    root.right = rightNode
 
-    val solution = _162FindPeakElement.Solution()
-    val firstListNode = arrayToListNode(intArrayOf(1,4,3,2,5,2)) ?: ListNode(1)
+    val solution = _36ValidSudoku.Solution()
+    val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
@@ -33,7 +30,7 @@ fun main() {
 //    array[1] = intArrayOf(5, 6, 7, 8)
 //    array[2] = intArrayOf(9, 10, 11, 12)
 //    array[3] = intArrayOf(13, 14, 15, 16)
-    array[0] = intArrayOf(1,3)
+    array[0] = intArrayOf(1, 3)
 //    array[1] = intArrayOf(10,11,16,20)
 //    array[2] = intArrayOf(23,30,34,60)
 //    array[1] = intArrayOf(5, 6)
@@ -53,7 +50,19 @@ fun main() {
             charArrayOf('A', 'D', 'E', 'E'),
         )
     val word = "ABCESCF"
-    val solve = solution.findPeakElement(intArrayOf(1, 2, 3, 1))
+
+    val boards = arrayOf(
+        charArrayOf('5', '3', '.', '.', '7', '.', '.', '.', '.'),
+        charArrayOf('6', '.', '.', '1', '9', '5', '.', '.', '.'),
+        charArrayOf('.', '9', '8', '.', '.', '.', '.', '6', '.'),
+        charArrayOf('8', '.', '.', '.', '6', '.', '.', '.', '3'),
+        charArrayOf('4', '.', '.', '8', '.', '3', '.', '.', '1'),
+        charArrayOf('7', '.', '.', '.', '2', '.', '.', '.', '6'),
+        charArrayOf('.', '6', '.', '.', '.', '.', '2', '8', '.'),
+        charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
+        charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
+    )
+    val solve = solution.isValidSudoku(boards)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
