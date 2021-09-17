@@ -1,14 +1,15 @@
 import medium._36ValidSudoku
+import medium._99RecoverBinarySearchTree
 
 fun main() {
 
-    val root = TreeNode(2)
-    val rightNode = TreeNode(-1)
+    val root = TreeNode(1)
     val leftNode = TreeNode(3)
-    root.left = rightNode
-//    root.right = rightNode
+    val rightNode = TreeNode(2)
+    root.left = leftNode
+    leftNode.right = rightNode
 
-    val solution = _36ValidSudoku.Solution()
+    val solution = _99RecoverBinarySearchTree.BestSolution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -62,7 +63,7 @@ fun main() {
         charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
         charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
     )
-    val solve = solution.isValidSudoku(boards)
+    val solve = solution.recoverTree(root)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
