@@ -1,3 +1,4 @@
+import easy._108ConvertSortedArrayToBinarySearchTree
 import medium._36ValidSudoku
 import medium._99RecoverBinarySearchTree
 
@@ -9,7 +10,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _99RecoverBinarySearchTree.BestSolution()
+    val solution = _108ConvertSortedArrayToBinarySearchTree.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -63,7 +64,7 @@ fun main() {
         charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
         charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
     )
-    val solve = solution.recoverTree(root)
+    val solve = solution.sortedArrayToBST(intArrayOf(-10,-3,0,5,9))
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
