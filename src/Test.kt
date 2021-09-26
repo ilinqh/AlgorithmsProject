@@ -1,6 +1,7 @@
 import easy._108ConvertSortedArrayToBinarySearchTree
 import easy._118PascalSTriangle
 import medium._36ValidSudoku
+import medium._371SumOfTwoIntegers
 import medium._725SplitLinkedListInParts
 import medium._99RecoverBinarySearchTree
 
@@ -12,7 +13,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _118PascalSTriangle.Solution()
+    val solution = _371SumOfTwoIntegers.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -66,8 +67,8 @@ fun main() {
         charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
         charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
     )
-    val solve = solution.generate(5)
-//    print(solve)
+    val solve = solution.getSum(5, -3)
+    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
@@ -78,10 +79,10 @@ fun main() {
 //    solve.forEach {
 //        print(" $it ")
 //    }
-    solve.forEach {
-        it.forEach { i ->
-            print(" $i ")
-        }
-        println()
-    }
+//    solve.forEach {
+//        it.forEach { i ->
+//            print(" $i ")
+//        }
+//        println()
+//    }
 }
