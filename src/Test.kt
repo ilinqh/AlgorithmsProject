@@ -1,5 +1,6 @@
 import easy._108ConvertSortedArrayToBinarySearchTree
 import easy._118PascalSTriangle
+import hard._639DecodeWaysII
 import medium._36ValidSudoku
 import medium._371SumOfTwoIntegers
 import medium._725SplitLinkedListInParts
@@ -13,7 +14,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _371SumOfTwoIntegers.Solution()
+    val solution = _639DecodeWaysII.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -67,7 +68,7 @@ fun main() {
         charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
         charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
     )
-    val solve = solution.getSum(5, -3)
+    val solve = solution.numDecodings("3*")
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
