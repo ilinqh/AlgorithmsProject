@@ -2,10 +2,7 @@ import easy._108ConvertSortedArrayToBinarySearchTree
 import easy._118PascalSTriangle
 import easy._171ExcelSheetColumnNumber
 import hard._639DecodeWaysII
-import medium._36ValidSudoku
-import medium._371SumOfTwoIntegers
-import medium._725SplitLinkedListInParts
-import medium._99RecoverBinarySearchTree
+import medium.*
 
 fun main() {
 
@@ -15,7 +12,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _171ExcelSheetColumnNumber.Solution()
+    val solution = _437PathSumIII.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -69,7 +66,9 @@ fun main() {
         charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
         charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
     )
-    val solve = solution.titleToNumber("FXSHRXW")
+    intArrayOf()
+    val treeRoot = arrayToTreeNode(arrayListOf(10,5,-3,3,2,null,11,3,-2,null,1))
+    val solve = solution.pathSum(treeRoot, 8)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
