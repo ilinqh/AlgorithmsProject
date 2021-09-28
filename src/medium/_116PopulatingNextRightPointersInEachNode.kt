@@ -11,27 +11,46 @@ class Node(var `val`: Int) {
 class _116PopulatingNextRightPointersInEachNode {
     class Solution {
         fun connect(root: Node?): Node? {
+            if (root == null) {
+                return root
+            }
             val queue = LinkedList<Node>()
-            root?.left?.let {
-                queue.add(it)
-            }
-            root?.right?.let {
-                queue.add(it)
-            }
+            queue.offer(root)
             while (queue.isNotEmpty()) {
                 val queueSize = queue.size
-                var head = queue.poll()
-                for (i in 1 until queueSize) {
+                for (i in 0 until queueSize) {
+                    val head = queue.poll()
                     head.left?.let {
-                        queue.add(it)
+                        queue.offer(it)
                     }
                     head.right?.let {
-                        queue.add(it)
+                        queue.offer(it)
                     }
-                    val current = queue.poll()
-                    head.next = current
-                    head = current
+                    if (i < queueSize - 1) {
+                        head.next = queue.peek()
+                    }
                 }
+            }
+            return root
+        }
+    }
+
+    class BestSolution {
+        fun connect(root: Node?): Node? {
+            if (root == null) {
+                return null
+            }
+            var leftmost = root
+            while (leftmost?.left != null) {
+                var head = leftmost
+                while (head != null) {
+                    head.left!!.next = head.right
+                    if (head.next != null) {
+                        head.right?.next = head.next!!.left
+                    }
+                    head = head.next
+                }
+                leftmost = leftmost.left
             }
             return root
         }
