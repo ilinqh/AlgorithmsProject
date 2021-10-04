@@ -15,7 +15,7 @@ class _482LicenseKeyFormatting {
                     }
                 }
             }
-            if (sb.isNotEmpty() && sb.last() == '-') {
+            if (sb.isNotEmpty() && sb[sb.length - 1] == '-') {
                 sb.deleteCharAt(sb.length - 1)
             }
             return sb.reverse().toString()
