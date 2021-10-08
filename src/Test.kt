@@ -1,3 +1,5 @@
+import easy._917ReverseOnlyLetters
+import medium._187RepeatedDnaSequences
 import medium._223RectangleArea
 import medium._482LicenseKeyFormatting
 
@@ -9,7 +11,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _482LicenseKeyFormatting.Solution()
+    val solution = _187RepeatedDnaSequences.BestSolution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -65,7 +67,7 @@ fun main() {
     )
     intArrayOf()
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.licenseKeyFormatting("5F3Z-2e-9-w", 4)
+    val solve = solution.findRepeatedDnaSequences("AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT")
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
