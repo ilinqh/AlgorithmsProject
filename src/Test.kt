@@ -1,6 +1,7 @@
 import easy._1796SecondLargestDigitInAString
 import easy._1957DeleteCharactersToMakeFancyString
 import easy._917ReverseOnlyLetters
+import medium._134GasStation
 import medium._187RepeatedDnaSequences
 import medium._223RectangleArea
 import medium._482LicenseKeyFormatting
@@ -14,7 +15,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _29DivideTwoIntegers().Solution()
+    val solution = _134GasStation.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -70,7 +71,7 @@ fun main() {
     )
     intArrayOf()
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.divide(-2147483648, -1)
+    val solve = solution.canCompleteCircuit(intArrayOf(1,2,3,4,5), intArrayOf(3,4,5,1,2))
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
