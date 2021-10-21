@@ -9,9 +9,10 @@ class _25ReverseNodesInKGroup {
                 return head
             }
             val preHead = ListNode(0)
-            preHead.next = head
+//            preHead.next = head
             var cur = head
             var step: Int
+            var first = true
             while (cur != null) {
                 step = k
                 var tail = cur
@@ -22,9 +23,9 @@ class _25ReverseNodesInKGroup {
                     reverse = step == 0
                 }
                 if (reverse) {
+                    step = k
                     var pre: ListNode? = null
                     var next: ListNode?
-                    step = k
                     while (step > 0) {
                         next = cur?.next
                         cur?.next = pre
@@ -32,7 +33,10 @@ class _25ReverseNodesInKGroup {
                         cur = next
                         step -= 1
                     }
-                    pre?.next = cur
+                    if (first) {
+                        first = false
+                        preHead.next = pre
+                    }
                 } else {
                     break
                 }
