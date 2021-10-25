@@ -1,9 +1,4 @@
-import easy._1796SecondLargestDigitInAString
-import easy._1957DeleteCharactersToMakeFancyString
-import easy._917ReverseOnlyLetters
-import hard._25ReverseNodesInKGroup
-import medium.*
-import solution_java.medium._29DivideTwoIntegers
+import medium._240SearchA2dMatrixIi
 
 fun main() {
 
@@ -13,7 +8,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _1641CountSortedVowelStrings.Solution()
+    val solution = _240SearchA2dMatrixIi.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -67,9 +62,15 @@ fun main() {
         charArrayOf('.', '.', '.', '4', '1', '9', '.', '.', '5'),
         charArrayOf('.', '.', '.', '.', '8', '.', '.', '7', '9'),
     )
-    intArrayOf()
+    val matrix = arrayOf(
+        intArrayOf(1, 4, 7, 11, 15),
+        intArrayOf(2, 5, 8, 12, 19),
+        intArrayOf(3, 6, 9, 16, 22),
+        intArrayOf(10, 13, 14, 17, 24),
+        intArrayOf(18, 21, 23, 26, 30)
+    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.countVowelStrings(1)
+    val solve = solution.searchMatrix(matrix, 20)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
