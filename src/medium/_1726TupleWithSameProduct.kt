@@ -1,12 +1,9 @@
 package medium
 
-import java.util.*
-
 class _1726TupleWithSameProduct {
     class Solution {
         fun tupleSameProduct(nums: IntArray): Int {
             val length = nums.size
-            Arrays.sort(nums)
             val map = HashMap<Int, Int>()
             for (i in 0 until length - 1) {
                 for (j in i + 1 until length) {
