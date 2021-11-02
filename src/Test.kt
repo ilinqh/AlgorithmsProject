@@ -1,9 +1,7 @@
 import easy._496NextGreaterElementI
 import easy._509FibonacciNumber
 import hard._301RemoveInvalidParentheses
-import medium._1726TupleWithSameProduct
-import medium._1861RotatingTheBox
-import medium._869ReorderedPowerOf2
+import medium.*
 
 fun main() {
 
@@ -13,7 +11,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _1861RotatingTheBox.Solution()
+    val solution = _199BinaryTreeRightSideView.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -75,7 +73,7 @@ fun main() {
         intArrayOf(18, 21, 23, 26, 30)
     )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.rotateTheBox(board)
+    val solve = solution.rightSideView(null)
 //    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
@@ -84,13 +82,13 @@ fun main() {
 //    listNodeToArray(solve).forEach {
 //        print(" $it ")
 //    }
-//    solve.forEach {
-//        print(" $it ")
-//    }
     solve.forEach {
-        it.forEach { i ->
-            print(" $i ")
-        }
-        println()
+        print(" $it ")
     }
+//    solve.forEach {
+//        it.forEach { i ->
+//            print(" $i ")
+//        }
+//        println()
+//    }
 }
