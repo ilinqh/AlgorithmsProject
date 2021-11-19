@@ -8,14 +8,19 @@ class _397IntegerReplacement {
             while (tempN != 1) {
                 if (tempN % 2 == 0) {
                     tempN = tempN shr 1
+                    ans += 1
+                } else if (tempN % 4 == 1) {
+                    tempN = tempN shr 1
+                    ans += 2
                 } else {
-                    if (tempN != 3 && ((tempN shr 1) and 1) == 1) {
-                        tempN += 1
+                    if (tempN == 3) {
+                        ans += 2
+                        tempN = 1
                     } else {
-                        tempN -= 1
+                        tempN = (tempN shr 1) + 1
+                        ans += 2
                     }
                 }
-                ans += 1
             }
             return ans
         }
