@@ -12,7 +12,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _318MaximumProductOfWordLengths.Solution()
+    val solution = _397IntegerReplacement.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -80,7 +80,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.maxProduct(arrayOf("a","aa","aaa","aaaa"))
+    val solve = solution.integerReplacement(2147483647)
     print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
