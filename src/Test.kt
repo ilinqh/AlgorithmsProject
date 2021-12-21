@@ -1,3 +1,4 @@
+import easy._1154DayOfTheYear
 import medium._210CourseScheduleIi
 
 fun main() {
@@ -8,7 +9,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _210CourseScheduleIi.Solution()
+    val solution = _1154DayOfTheYear.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -76,8 +77,8 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.findOrder(4, arrayOf(intArrayOf(1, 0), intArrayOf(2, 0), intArrayOf(3, 1), intArrayOf(3, 2)))
-//    print(solve)
+    val solve = solution.dayOfYear("2021-10-11")
+    print(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
 
@@ -85,9 +86,9 @@ fun main() {
 //    listNodeToArray(solve).forEach {
 //        print(" $it ")
 //    }
-    solve.forEach {
-        print(" $it ")
-    }
+//    solve.forEach {
+//        print(" $it ")
+//    }
 //    solve.forEach {
 //        it.forEach { i ->
 //            print(" $i ")
