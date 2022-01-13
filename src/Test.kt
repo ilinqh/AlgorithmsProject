@@ -1,4 +1,5 @@
 import easy._1576ReplaceAllSToAvoidConsecutiveRepeatingCharacters
+import easy._747LargestNumberAtLeastTwiceOfOthers
 import medium._581ShortestUnsortedContinuousSubarray
 import medium._846HandOfStraights
 import solution_java.medium._334IncreasingTripletSubsequence
@@ -36,7 +37,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _334IncreasingTripletSubsequence().Solution()
+    val solution = _747LargestNumberAtLeastTwiceOfOthers.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -104,7 +105,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.increasingTriplet(intArrayOf(1, 1, 1, 1, 1, 1, 1, 1))
+    val solve = solution.dominantIndex(intArrayOf(3,6,1,0))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
