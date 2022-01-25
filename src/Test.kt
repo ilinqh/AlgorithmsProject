@@ -1,4 +1,5 @@
 import easy._1576ReplaceAllSToAvoidConsecutiveRepeatingCharacters
+import easy._1688CountOfMatchesInTournament
 import easy._747LargestNumberAtLeastTwiceOfOthers
 import hard._1220CountVowelsPermutation
 import medium._539MinimumTimeDifference
@@ -39,7 +40,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _539MinimumTimeDifference.Solution()
+    val solution = _1688CountOfMatchesInTournament.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -107,7 +108,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.findMinDifference(arrayListOf("23:59", "00:00"))
+    val solve = solution.numberOfMatches(200)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
