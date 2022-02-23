@@ -2,7 +2,10 @@ import easy._1576ReplaceAllSToAvoidConsecutiveRepeatingCharacters
 import easy._1688CountOfMatchesInTournament
 import easy._747LargestNumberAtLeastTwiceOfOthers
 import hard._1220CountVowelsPermutation
-import medium.*
+import medium._1405LongestHappyString
+import medium._539MinimumTimeDifference
+import medium._581ShortestUnsortedContinuousSubarray
+import medium._846HandOfStraights
 import solution_java.medium._334IncreasingTripletSubsequence
 import solution_java.medium._71SimplifyPath
 
@@ -38,7 +41,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _838PushDominoes.Solution()
+    val solution = _1405LongestHappyString.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -106,7 +109,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.pushDominoes(".L.R...LR..L..")
+    val solve = solution.longestDiverseString(2, 2, 2)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
