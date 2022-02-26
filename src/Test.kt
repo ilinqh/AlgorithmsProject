@@ -25,6 +25,11 @@ fun printResult(solve: Any) {
                 }
             }
         }
+        is IntArray -> {
+            solve.forEach {
+                print(" $it ")
+            }
+        }
         else -> {
             print(solve)
         }
@@ -39,7 +44,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2016MaximumDifferenceBetweenIncreasingElements.Solution()
+    val solution = _1053PreviousPermutationWithOneSwap.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -107,7 +112,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.maximumDifference(intArrayOf(1,5,2,10))
+    val solve = solution.prevPermOpt1(intArrayOf(1,9,4,6,7))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
