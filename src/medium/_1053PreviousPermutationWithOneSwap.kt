@@ -1,24 +1,31 @@
 package medium
 
 class _1053PreviousPermutationWithOneSwap {
-class Solution {
-    fun prevPermOpt1(arr: IntArray): IntArray {
-        for (i in (arr.size - 1) downTo 1) {
-            var isBreak = false
-            for (j in (i - 1) downTo 0) {
-                if (arr[i] < arr[j]) {
-                    val temp = arr[i]
-                    arr[i] = arr[j]
-                    arr[j] = temp
-                    isBreak = true
-                    break
+    class Solution {
+        fun prevPermOpt1(arr: IntArray): IntArray {
+            var curMax = -1
+            var index = -1
+            var hasResult = false
+            for (i in (arr.size - 2) downTo 0) {
+                if (arr[i + 1] < arr[i]) {
+                    for (j in (i + 1) until arr.size) {
+                        if (arr[i] > arr[j]) {
+                            hasResult = true
+                            if (arr[j] > curMax) {
+                                curMax = arr[j]
+                                index = j
+                            }
+                        }
+                    }
+                    if (hasResult) {
+                        val temp = arr[i]
+                        arr[i] = arr[index]
+                        arr[index] = temp
+                        return arr
+                    }
                 }
             }
-            if (isBreak) {
-                break
-            }
+            return arr
         }
-        return arr
     }
-}
 }

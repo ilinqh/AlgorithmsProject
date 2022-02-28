@@ -112,7 +112,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.prevPermOpt1(intArrayOf(1,9,4,6,7))
+    val solve = solution.prevPermOpt1(intArrayOf(3, 1, 1, 3))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
