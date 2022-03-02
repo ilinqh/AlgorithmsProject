@@ -1,4 +1,4 @@
-package design_partterns;
+package design_patterns;
 
 /**
  * 饿汉模式不支持懒加载
