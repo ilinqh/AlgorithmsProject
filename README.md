@@ -1,1 +1,3 @@
-# AlgorithmsExerciseProject
+# AlgorithmsProject
+本项目初衷只是用来记录日常刷 LeetCode 的，最近把设计模式的东西也加进来了，虽然不符合软件设计的单一原则，但为了方便管理，就放到同一个项目中了~skr~
+
