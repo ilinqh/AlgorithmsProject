@@ -1,7 +1,4 @@
-import easy._1576ReplaceAllSToAvoidConsecutiveRepeatingCharacters
-import easy._1688CountOfMatchesInTournament
-import easy._2016MaximumDifferenceBetweenIncreasingElements
-import easy._747LargestNumberAtLeastTwiceOfOthers
+import easy.*
 import hard._1220CountVowelsPermutation
 import medium.*
 import solution_java.medium._334IncreasingTripletSubsequence
@@ -45,7 +42,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _6ZigzagConversion().Solution()
+    val solution = _258AddDigits.OtherSolution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -113,7 +110,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.convert("PAYPALISHIRING", 3)
+    val solve = solution.addDigits(55)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
