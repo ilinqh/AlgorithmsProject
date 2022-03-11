@@ -42,7 +42,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2100FindGoodDaysToRobTheBank.Solution()
+    val solution = _2049CountNodesWithTheHighestScore.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -110,7 +110,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.goodDaysToRobBank(intArrayOf(3, 0, 0, 0, 1), 2)
+    val solve = solution.countHighestScoreNodes(intArrayOf(-1,2,0,2,0))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
