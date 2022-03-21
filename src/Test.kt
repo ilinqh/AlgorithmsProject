@@ -1,10 +1,6 @@
-import interview.byte_dance.TwoBigSubtract
+import easy._653TwoSumIvInputIsABst
 
-fun printResult(solve: Any?) {
-    if (solve == null) {
-        print("solve is null")
-        return
-    }
+fun printResult(solve: Any) {
     when (solve) {
         is ListNode -> {
             listNodeToArray(solve).forEach {
@@ -41,7 +37,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = TwoBigSubtract.Solution()
+    val solution = _653TwoSumIvInputIsABst.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -68,8 +64,7 @@ fun main() {
 //    array[2] = intArrayOf(23,30,34,60)
 //    array[1] = intArrayOf(5, 6)
 //    array[2] = intArrayOf(1, 1)
-    val listNode1 = arrayToListNode(intArrayOf(1, 2, 3, 4, 5, 6))
-    val listNode2 = arrayToListNode(intArrayOf(1, 2, 3, 4, 5))
+    val listNode = arrayToListNode(intArrayOf(1, 2, 3, 4, 5))
 
     /**
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
@@ -110,7 +105,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.twoBigSubtract(listNode1, listNode2)
+    val solve = solution.findTarget(arrayToTreeNode(arrayListOf(5, 3, 6, 2, 4, null, 7)), 9)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
