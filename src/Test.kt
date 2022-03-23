@@ -1,4 +1,5 @@
 import easy._653TwoSumIvInputIsABst
+import hard._440KThSmallestInLexicographicalOrder
 
 fun printResult(solve: Any) {
     when (solve) {
@@ -37,7 +38,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _653TwoSumIvInputIsABst.Solution()
+    val solution = _440KThSmallestInLexicographicalOrder.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -105,7 +106,7 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.findTarget(arrayToTreeNode(arrayListOf(5, 3, 6, 2, 4, null, 7)), 9)
+    val solve = solution.findKthNumber(10, 3)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
