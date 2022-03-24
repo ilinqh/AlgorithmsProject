@@ -1,4 +1,5 @@
 import easy._653TwoSumIvInputIsABst
+import easy._661ImageSmoother
 import hard._440KThSmallestInLexicographicalOrder
 
 fun printResult(solve: Any) {
@@ -10,12 +11,21 @@ fun printResult(solve: Any) {
         }
         is Array<*> -> {
             solve.forEach {
-                if (it is Array<*>) {
-                    it.forEach { i ->
-                        print(" $i ")
+                when (it) {
+                    is Array<*> -> {
+                        it.forEach { i ->
+                            print(" $i ")
+                        }
                     }
-                } else {
-                    print(" $it ")
+                    is IntArray -> {
+                        it.forEach { i ->
+                            print(" $i ")
+                        }
+                        println()
+                    }
+                    else -> {
+                        print(" $it ")
+                    }
                 }
             }
         }
@@ -38,7 +48,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _440KThSmallestInLexicographicalOrder.Solution()
+    val solution = _661ImageSmoother.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -106,7 +116,8 @@ fun main() {
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
-    val solve = solution.findKthNumber(10, 3)
+    //[100,200,100],[200,50,200],[100,200,100]
+    val solve = solution.imageSmoother(arrayOf(intArrayOf(100,200,100), intArrayOf(200,50,200), intArrayOf(100,200,100)))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
