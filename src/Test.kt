@@ -4,6 +4,7 @@ import easy._728SelfDividingNumbers
 import hard._440KThSmallestInLexicographicalOrder
 import medium._2024MaximizeTheConfusionOfAnExam
 import medium._386LexicographicalNumbers
+import medium._388LongestAbsoluteFilePath
 import medium._954ArrayOfDoubledPairs
 import solution_java.medium._172FactorialTrailingZeroes
 
@@ -53,7 +54,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _386LexicographicalNumbers.Solution()
+    val solution = _388LongestAbsoluteFilePath.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -122,7 +123,7 @@ fun main() {
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.lexicalOrder(1999)
+    val solve = solution.lengthLongestPath("file1.txt\nfile2.txt\nlongfile.txt")
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
