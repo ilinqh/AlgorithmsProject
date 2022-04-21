@@ -1,6 +1,7 @@
 import easy._653TwoSumIvInputIsABst
 import easy._661ImageSmoother
 import easy._728SelfDividingNumbers
+import easy._824GoatLatin
 import hard._440KThSmallestInLexicographicalOrder
 import medium._2024MaximizeTheConfusionOfAnExam
 import medium._386LexicographicalNumbers
@@ -54,7 +55,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _388LongestAbsoluteFilePath.Solution()
+    val solution = _824GoatLatin.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -123,7 +124,7 @@ fun main() {
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.lengthLongestPath("file1.txt\nfile2.txt\nlongfile.txt")
+    val solve = solution.toGoatLatin("I speak Goat Latin")
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
