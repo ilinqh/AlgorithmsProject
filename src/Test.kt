@@ -1,10 +1,4 @@
-import easy._653TwoSumIvInputIsABst
-import easy._661ImageSmoother
-import easy._728SelfDividingNumbers
-import easy._824GoatLatin
-import hard._440KThSmallestInLexicographicalOrder
-import medium.*
-import solution_java.medium._172FactorialTrailingZeroes
+import medium._417PacificAtlanticWaterFlow
 
 fun printResult(solve: Any) {
     when (solve) {
@@ -52,7 +46,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _396RotateFunction.Solution()
+    val solution = _417PacificAtlanticWaterFlow.Solution()
     val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
     val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
     val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
@@ -121,7 +115,15 @@ fun main() {
 //    )
     val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.maxRotateFunction(intArrayOf(100))
+    val solve = solution.pacificAtlantic(
+        arrayOf(
+            intArrayOf(1, 2, 2, 3, 5),
+            intArrayOf(3, 2, 3, 4, 4),
+            intArrayOf(2, 4, 5, 3, 1),
+            intArrayOf(6, 7, 1, 4, 5),
+            intArrayOf(5, 1, 1, 2, 4),
+        )
+    )
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
