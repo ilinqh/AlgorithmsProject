@@ -6,7 +6,7 @@ import solution_java.medium._150EvaluateReversePolishNotation
 fun printResult(solve: Any) {
     when (solve) {
         is ListNode -> {
-            listNodeToArray(solve).forEach {
+            solve.toArray().forEach {
                 print(" $it ")
             }
         }
@@ -50,9 +50,9 @@ fun main() {
     leftNode.right = rightNode
 
     val solution = _151ReverseWordsInAString.Solution()
-    val firstListNode = arrayToListNode(intArrayOf(1, 4, 3, 2, 5, 2)) ?: ListNode(1)
-    val secondListNode = arrayToListNode(intArrayOf(1, 3, 4)) ?: ListNode(1)
-    val thirdListNode = arrayToListNode(intArrayOf(2, 6)) ?: ListNode(1)
+    val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
+    val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
+    val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
 //    val solve = solution.threeSum(intArrayOf(-1, 0, 1, 2, -1, -4, -2, -3, 3, 0, 4))
 //    val solve = solution.threeSumClosest(intArrayOf(1, 1, -1, -1, 3), -1)
 //    val solve = solution.fourSum(intArrayOf(1, 0, -1, 0, -2, 2), 0)
@@ -76,7 +76,7 @@ fun main() {
 //    array[2] = intArrayOf(23,30,34,60)
 //    array[1] = intArrayOf(5, 6)
 //    array[2] = intArrayOf(1, 1)
-    val listNode = arrayToListNode(intArrayOf(1, 2, 3, 4, 5))
+    val listNode = intArrayOf(1, 2, 3, 4, 5).toListNode()
 
     /**
      * n = 3, edges = [[0,1,100],[1,2,100],[0,2,500]]
@@ -116,7 +116,7 @@ fun main() {
 //        intArrayOf(10, 13, 14, 17, 24),
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
-    val treeRoot = arrayToTreeNode(arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1))
+    val treeRoot = arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
     val solve = solution.reverseWords("the sky is blue")
     printResult(solve)

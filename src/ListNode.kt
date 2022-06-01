@@ -12,19 +12,19 @@ class ListNode {
     }
 }
 
-fun arrayToListNode(intArray: IntArray): ListNode? {
+fun IntArray.toListNode(): ListNode? {
     val preHead = ListNode(-1)
     var prev = preHead
-    intArray.forEach {
+    this.forEach {
         prev.next = ListNode(it)
         prev = prev.next!!
     }
     return preHead.next
 }
 
-fun listNodeToArray(tempList: ListNode?): IntArray {
+fun ListNode?.toArray(): IntArray {
     val intArray = ArrayList<Int>()
-    var listNode = tempList
+    var listNode = this
     while (listNode != null) {
         intArray.add(listNode.`val`)
         listNode = listNode.next
