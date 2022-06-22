@@ -1,6 +1,7 @@
 import easy._944DeleteColumnsToMakeSorted
 import medium._151ReverseWordsInAString
 import medium._417PacificAtlanticWaterFlow
+import medium._513FindBottomLeftTreeValue
 import solution_java.medium._150EvaluateReversePolishNotation
 
 fun printResult(solve: Any) {
@@ -49,7 +50,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _151ReverseWordsInAString.Solution()
+    val solution = _513FindBottomLeftTreeValue.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -116,9 +117,9 @@ fun main() {
 //        intArrayOf(10, 13, 14, 17, 24),
 //        intArrayOf(18, 21, 23, 26, 30)
 //    )
-    val treeRoot = arrayListOf(5, 4, 8, 11, null, 13, 4, 7, 2, null, null, null, 1).toTreeNode()
+    val treeRoot = arrayListOf(2, 1, 3, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.reverseWords("the sky is blue")
+    val solve = solution.findBottomLeftValue(treeRoot)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
