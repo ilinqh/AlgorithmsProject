@@ -1,4 +1,4 @@
-package solution_java.easy;
+package solution_java.medium;
 
 public class _200NumberOfIslands {
     public class Solution {
