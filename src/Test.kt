@@ -3,6 +3,7 @@ import medium._151ReverseWordsInAString
 import medium._417PacificAtlanticWaterFlow
 import medium._513FindBottomLeftTreeValue
 import solution_java.medium._150EvaluateReversePolishNotation
+import solution_java.medium._322CoinChange
 import solution_java.medium._64MinimumPathSum
 
 fun printResult(solve: Any) {
@@ -51,7 +52,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _64MinimumPathSum().Solution()
+    val solution = _322CoinChange().Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -120,7 +121,7 @@ fun main() {
 //    )
     val treeRoot = arrayListOf(2, 1, 3, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.minPathSum(matrix)
+    val solve = solution.coinChange(intArrayOf(1, 2, 5), 11)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
