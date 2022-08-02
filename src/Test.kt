@@ -2,6 +2,7 @@ import easy._944DeleteColumnsToMakeSorted
 import medium._151ReverseWordsInAString
 import medium._417PacificAtlanticWaterFlow
 import medium._513FindBottomLeftTreeValue
+import medium._622DesignCircularQueue
 import solution_java.medium._150EvaluateReversePolishNotation
 import solution_java.medium._322CoinChange
 import solution_java.medium._64MinimumPathSum
@@ -122,6 +123,16 @@ fun main() {
     val treeRoot = arrayListOf(2, 1, 3, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
     val solve = solution.coinChange(intArrayOf(1, 2, 5), 11)
+    val circularQueue = _622DesignCircularQueue.MyCircularQueue(3) // 设置长度为 3
+    circularQueue.enQueue(1) // 返回 true
+    circularQueue.enQueue(2) // 返回 true
+    circularQueue.enQueue(3) // 返回 true
+    circularQueue.enQueue(4) // 返回 false，队列已满
+    circularQueue.Rear() // 返回 3
+    circularQueue.isFull() // 返回 true
+    circularQueue.deQueue() // 返回 true
+    circularQueue.enQueue(4) // 返回 true
+    circularQueue.Rear() // 返回 4
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2

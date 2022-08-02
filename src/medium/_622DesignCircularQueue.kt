@@ -3,9 +3,17 @@ package medium
 class _622DesignCircularQueue {
     class MyCircularQueue(val k: Int) {
 
-        private val array: IntArray = IntArray(k)
+        private var head = 0
+        private var tail = 0
+        private val capacity = k + 1
+        private val array: Array<Int?> = Array(capacity) { null }
 
         fun enQueue(value: Int): Boolean {
+            if (isFull()) {
+                return false
+            }
+            array[tail] = value
+            tail = (tail + 1) % capacity
             return true
         }
 
@@ -13,24 +21,31 @@ class _622DesignCircularQueue {
             if (isEmpty()) {
                 return false
             }
+            array[head] = null
+            head = (head + 1) % capacity
             return true
         }
 
         fun Front(): Int {
-            return -1
+            if (isEmpty()) {
+                return -1
+            }
+            return array[head]!!
         }
 
         fun Rear(): Int {
-            return -1
+            if (isEmpty()) {
+                return -1
+            }
+            return array[(tail - 1 + capacity) % capacity]!!
         }
 
         fun isEmpty(): Boolean {
-            return false
+            return head == tail
         }
 
         fun isFull(): Boolean {
-            return true
+            return (tail + 1) % capacity == head
         }
-
     }
 }
