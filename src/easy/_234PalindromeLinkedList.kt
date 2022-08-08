@@ -16,12 +16,12 @@ class _234PalindromeLinkedList {
             }
             var next = slow?.next
             val slowHead = ListNode(-1, slow)
+            slow?.next = null
             while (next != null) {
                 val cur = slowHead.next
                 slowHead.next = next
                 next = next.next
                 slowHead.next?.next = cur
-                cur?.next = null
             }
             val headPrev = ListNode(-1, head)
             while (slowHead.next != null) {
