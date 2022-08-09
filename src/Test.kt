@@ -1,3 +1,4 @@
+import easy._1413MinimumValueToGetPositiveStepByStepSum
 import easy._234PalindromeLinkedList
 import easy._944DeleteColumnsToMakeSorted
 import medium.*
@@ -51,7 +52,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _234PalindromeLinkedList.Solution()
+    val solution = _1413MinimumValueToGetPositiveStepByStepSum.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -130,7 +131,7 @@ fun main() {
 //    circularQueue.Rear() // 返回 4
     val treeRoot = arrayListOf(1, 2, 3, 4, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.isPalindrome(intArrayOf(1, 0, 3, 4, 0, 1).toListNode())
+    val solve = solution.minStartValue(intArrayOf(1, -2, -3))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
