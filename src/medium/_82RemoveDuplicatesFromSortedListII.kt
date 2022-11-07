@@ -16,7 +16,7 @@ class _82RemoveDuplicatesFromSortedListII {
             while (curr != null) {
                 if (curr.`val` == next?.`val`) {
                     while (next?.`val` == curr.`val`) {
-                        next = next.next
+                        next = next?.next
                     }
                     curr = next
                     preV?.next = curr
