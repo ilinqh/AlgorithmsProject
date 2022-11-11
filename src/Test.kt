@@ -1,10 +1,4 @@
-import easy._1413MinimumValueToGetPositiveStepByStepSum
-import easy._234PalindromeLinkedList
-import easy._944DeleteColumnsToMakeSorted
-import medium.*
-import solution_java.medium._150EvaluateReversePolishNotation
-import solution_java.medium._322CoinChange
-import solution_java.medium._64MinimumPathSum
+import easy._1704DetermineIfStringHalvesAreAlike
 
 fun printResult(solve: Any) {
     when (solve) {
@@ -13,6 +7,7 @@ fun printResult(solve: Any) {
                 print(" $it ")
             }
         }
+
         is Array<*> -> {
             solve.forEach {
                 when (it) {
@@ -21,23 +16,27 @@ fun printResult(solve: Any) {
                             print(" $i ")
                         }
                     }
+
                     is IntArray -> {
                         it.forEach { i ->
                             print(" $i ")
                         }
                         println()
                     }
+
                     else -> {
                         print(" $it ")
                     }
                 }
             }
         }
+
         is IntArray -> {
             solve.forEach {
                 print(" $it ")
             }
         }
+
         else -> {
             print(solve)
         }
@@ -52,7 +51,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _816AmbiguousCoordinates.Solution()
+    val solution = _1704DetermineIfStringHalvesAreAlike.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -131,7 +130,7 @@ fun main() {
 //    circularQueue.Rear() // 返回 4
     val treeRoot = arrayListOf(1, 2, 3, 4, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.ambiguousCoordinates("(100)")
+    val solve = solution.halvesAreAlike("AbCdEfGh")
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
