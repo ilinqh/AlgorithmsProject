@@ -1,4 +1,4 @@
-import easy._1704DetermineIfStringHalvesAreAlike
+import easy._1710MaximumUnitsOnATruck
 
 fun printResult(solve: Any) {
     when (solve) {
@@ -51,7 +51,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _1704DetermineIfStringHalvesAreAlike.Solution()
+    val solution = _1710MaximumUnitsOnATruck.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -130,7 +130,9 @@ fun main() {
 //    circularQueue.Rear() // 返回 4
     val treeRoot = arrayListOf(1, 2, 3, 4, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
-    val solve = solution.halvesAreAlike("AbCdEfGh")
+//    [[5,10],[2,5],[4,7],[3,9]]
+    val solve =
+        solution.maximumUnits(arrayOf(intArrayOf(5, 10), intArrayOf(2, 5), intArrayOf(4, 7), intArrayOf(3, 9)), 10)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
