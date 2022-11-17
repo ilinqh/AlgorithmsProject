@@ -1,4 +1,4 @@
-import easy._1710MaximumUnitsOnATruck
+import medium._792NumberOfMatchingSubsequences
 
 fun printResult(solve: Any) {
     when (solve) {
@@ -51,7 +51,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _1710MaximumUnitsOnATruck.Solution()
+    val solution = _792NumberOfMatchingSubsequences.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -131,8 +131,9 @@ fun main() {
     val treeRoot = arrayListOf(1, 2, 3, 4, null).toTreeNode()
     //[100,200,100],[200,50,200],[100,200,100]
 //    [[5,10],[2,5],[4,7],[3,9]]
-    val solve =
-        solution.maximumUnits(arrayOf(intArrayOf(5, 10), intArrayOf(2, 5), intArrayOf(4, 7), intArrayOf(3, 9)), 10)
+    // "abcde"
+    //["a","bb","acd","ace"]
+    val solve = solution.numMatchingSubseq("abcde", arrayOf("a","bb","acd","ace"))
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
