@@ -1,6 +1,9 @@
+import easy._206ReverseLinkedList2
+import easy._21MergeTwoSortedLists2
 import medium._792NumberOfMatchingSubsequences
 
-fun printResult(solve: Any) {
+fun printResult(solve: Any?) {
+    solve ?: return
     when (solve) {
         is ListNode -> {
             solve.toArray().forEach {
@@ -51,7 +54,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _792NumberOfMatchingSubsequences.Solution()
+    val solution = _21MergeTwoSortedLists2.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -133,7 +136,7 @@ fun main() {
 //    [[5,10],[2,5],[4,7],[3,9]]
     // "abcde"
     //["a","bb","acd","ace"]
-    val solve = solution.numMatchingSubseq("abcde", arrayOf("a","bb","acd","ace"))
+    val solve = solution.mergeTwoLists(intArrayOf(1, 2, 4).toListNode(), intArrayOf(1, 3, 4).toListNode())
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
