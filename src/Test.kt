@@ -3,6 +3,7 @@ import easy._21MergeTwoSortedLists2
 import easy._2490CircularSentence
 import medium._1419MinimumNumberOfFrogsCroaking
 import medium._792NumberOfMatchingSubsequences
+import solution_java.medium._22GenerateParentheses
 
 fun printResult(solve: Any?) {
     solve ?: return
@@ -56,7 +57,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2490CircularSentence.Solution()
+    val solution = _22GenerateParentheses().Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -138,7 +139,7 @@ fun main() {
 //    [[5,10],[2,5],[4,7],[3,9]]
     // "abcde"
     //["a","bb","acd","ace"]
-    val solve = solution.isCircularSentence("leetcode exercises sound delightful")
+    val solve = solution.generateParenthesis(2)
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
