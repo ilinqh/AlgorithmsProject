@@ -3,6 +3,7 @@ import easy._21MergeTwoSortedLists2
 import easy._2490CircularSentence
 import medium._1419MinimumNumberOfFrogsCroaking
 import medium._792NumberOfMatchingSubsequences
+import solution_java.medium._165CompareVersionNumbers
 import solution_java.medium._22GenerateParentheses
 
 fun printResult(solve: Any?) {
@@ -57,7 +58,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _22GenerateParentheses().Solution()
+    val solution = _165CompareVersionNumbers().Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -139,7 +140,7 @@ fun main() {
 //    [[5,10],[2,5],[4,7],[3,9]]
     // "abcde"
     //["a","bb","acd","ace"]
-    val solve = solution.generateParenthesis(2)
+    val solve = solution.compareVersion("1.01", "1.001")
     printResult(solve)
 //    val a = 1.inv()
 //    val a = 1 xor 2
