@@ -1,11 +1,7 @@
-import easy._206ReverseLinkedList2
-import easy._21MergeTwoSortedLists2
-import easy._2490CircularSentence
-import medium._1419MinimumNumberOfFrogsCroaking
+import easy._2582PassThePillow
 import medium._2178MaximumSplitOfPositiveEvenIntegers
-import medium._792NumberOfMatchingSubsequences
-import solution_java.medium._165CompareVersionNumbers
-import solution_java.medium._22GenerateParentheses
+import java.math.BigInteger
+import java.security.MessageDigest
 
 fun printResult(solve: Any?) {
     solve ?: return
@@ -51,6 +47,39 @@ fun printResult(solve: Any?) {
     }
 }
 
+fun md5(input: String): String {
+    val md = MessageDigest.getInstance("MD5")
+    val messageDigest = md.digest(input.toByteArray())
+    val no = BigInteger(1, messageDigest)
+    var hashText = no.toString(16)
+    while (hashText.length < 32) {
+        hashText = "0$hashText"
+    }
+    return hashText
+}
+
+data class Item(
+    val name: String?,
+    val age: Int = 1,
+    val sex: Int = 1,
+) {
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Item
+
+        if (name != other.name) return false
+        return sex == other.sex
+    }
+
+    override fun hashCode(): Int {
+        var result = name?.hashCode() ?: 0
+        result = 31 * result + sex
+        return result
+    }
+}
+
 fun main() {
 
     val root = TreeNode(1)
@@ -59,7 +88,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2178MaximumSplitOfPositiveEvenIntegers.Solution()
+    val solution = _2582PassThePillow.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -141,9 +170,14 @@ fun main() {
 //    [[5,10],[2,5],[4,7],[3,9]]
     // "abcde"
     //["a","bb","acd","ace"]
-    val solve = solution.maximumEvenSplit(12)
-    printResult(solve)
+    val solve = solution.passThePillow(3, 5)
+//    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
 //    val a = 1 xor 2
-
+//
+//    val arrayList = ArrayList<Item>()
+//    arrayList.add(Item("name", 1, 1))
+//    arrayList.add(Item("name1", 2, 2))
+//    arrayList.add(Item("name", 3, 1))
+    printResult(solve)
 }
