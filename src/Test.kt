@@ -1,6 +1,4 @@
-import easy._2578SplitWithMinimumSum
-import easy._2582PassThePillow
-import medium._2178MaximumSplitOfPositiveEvenIntegers
+import medium._1222QueensThatCanAttackTheKing
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -89,7 +87,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2578SplitWithMinimumSum.Solution()
+    val solution = _1222QueensThatCanAttackTheKing.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -171,7 +169,18 @@ fun main() {
 //    [[5,10],[2,5],[4,7],[3,9]]
     // "abcde"
     //["a","bb","acd","ace"]
-    val solve = solution.splitNum(2578)
+//    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
+    val solve = solution.queensAttacktheKing(
+        arrayOf(
+            intArrayOf(0, 0),
+            intArrayOf(1, 1),
+            intArrayOf(2, 2),
+            intArrayOf(3, 4),
+            intArrayOf(3, 5),
+            intArrayOf(4, 4),
+            intArrayOf(4, 5),
+        ), intArrayOf(3, 3)
+    )
 //    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
 //    val a = 1 xor 2
