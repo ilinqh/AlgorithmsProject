@@ -1,3 +1,4 @@
+import easy._2678NumberOfSeniorCitizens
 import medium._1222QueensThatCanAttackTheKing
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -87,7 +88,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _1222QueensThatCanAttackTheKing.Solution()
+    val solution = _2678NumberOfSeniorCitizens.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -170,16 +171,10 @@ fun main() {
     // "abcde"
     //["a","bb","acd","ace"]
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
-    val solve = solution.queensAttacktheKing(
+    val solve = solution.countSeniors(
         arrayOf(
-            intArrayOf(0, 0),
-            intArrayOf(1, 1),
-            intArrayOf(2, 2),
-            intArrayOf(3, 4),
-            intArrayOf(3, 5),
-            intArrayOf(4, 4),
-            intArrayOf(4, 5),
-        ), intArrayOf(3, 3)
+            "7868190130M7522","5303914400F9211","9273338290F4010"
+        )
     )
 //    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
