@@ -1,5 +1,4 @@
-import easy._2678NumberOfSeniorCitizens
-import medium._1222QueensThatCanAttackTheKing
+import easy._2103RingsAndRods
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -88,7 +87,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2678NumberOfSeniorCitizens.Solution()
+    val solution = _2103RingsAndRods.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -171,11 +170,7 @@ fun main() {
     // "abcde"
     //["a","bb","acd","ace"]
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
-    val solve = solution.countSeniors(
-        arrayOf(
-            "7868190130M7522","5303914400F9211","9273338290F4010"
-        )
-    )
+    val solve = solution.countPoints("B0R0G0R9R0B0G0")
 //    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
 //    val a = 1 xor 2
