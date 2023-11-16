@@ -1,4 +1,5 @@
 import easy._2103RingsAndRods
+import easy._2760LongestEvenOddSubarrayWithThreshold
 import solution_java.medium._318MaximumProductOfWordLengths
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -88,7 +89,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _318MaximumProductOfWordLengths().Solution()
+    val solution = _2760LongestEvenOddSubarrayWithThreshold.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -171,7 +172,7 @@ fun main() {
     // "abcde"
     //["a","bb","acd","ace"]
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
-    val solve = solution.maxProduct(arrayOf("abcw","baz","foo","bar","xtfn","abcdef"))
+    val solve = solution.longestAlternatingSubarray(intArrayOf(4), 1)
 //    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
 //    val a = 1 xor 2
