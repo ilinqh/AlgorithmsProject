@@ -1,6 +1,4 @@
-import easy._2103RingsAndRods
-import easy._2760LongestEvenOddSubarrayWithThreshold
-import solution_java.medium._318MaximumProductOfWordLengths
+import medium._2304MinimumPathCostInAGrid
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -89,7 +87,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2760LongestEvenOddSubarrayWithThreshold.Solution()
+    val solution = _2304MinimumPathCostInAGrid.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -172,7 +170,19 @@ fun main() {
     // "abcde"
     //["a","bb","acd","ace"]
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
-    val solve = solution.longestAlternatingSubarray(intArrayOf(4), 1)
+    // [5,3],[4,0],[2,1]
+    // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
+    val solve = solution.minPathCost(
+        arrayOf(intArrayOf(5, 3), intArrayOf(4, 0), intArrayOf(2, 1)),
+        arrayOf(
+            intArrayOf(9, 8),
+            intArrayOf(1, 5),
+            intArrayOf(10, 12),
+            intArrayOf(18, 6),
+            intArrayOf(2, 4),
+            intArrayOf(14, 3)
+        )
+    )
 //    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
 //    val a = 1 xor 2
