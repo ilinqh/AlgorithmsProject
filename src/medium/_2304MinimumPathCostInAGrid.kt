@@ -15,11 +15,10 @@ class _2304MinimumPathCostInAGrid {
             }
             for (r in 1 until row) {
                 for (c in 0 until column) {
-                    var temp = Int.MAX_VALUE
+                    dp[r][c] = Int.MAX_VALUE
                     for (i in 0 until column) {
-                        temp = Math.min(temp, dp[r - 1][i] + moveCost[grid[r - 1][i]][c])
+                        dp[r][c] = Math.min(dp[r][c], grid[r][c] + dp[r - 1][i] + moveCost[grid[r - 1][i]][c])
                     }
-                    dp[r][c] = grid[r][c] + temp
                 }
             }
 

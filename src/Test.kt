@@ -173,14 +173,14 @@ fun main() {
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
     val solve = solution.minPathCost(
-        arrayOf(intArrayOf(5, 3), intArrayOf(4, 0), intArrayOf(2, 1)),
+        arrayOf(intArrayOf(5,1,2), intArrayOf(4,0,3)/*, intArrayOf(2, 1)*/),
         arrayOf(
-            intArrayOf(9, 8),
-            intArrayOf(1, 5),
-            intArrayOf(10, 12),
-            intArrayOf(18, 6),
-            intArrayOf(2, 4),
-            intArrayOf(14, 3)
+            intArrayOf(12,10,15),
+            intArrayOf(20,23,8),
+            intArrayOf(21,7,1),
+            intArrayOf(8,1,13),
+            intArrayOf(9,10,25),
+            intArrayOf(5,3,2)
         )
     )
 //    printResult(md5("abcdefghj123456789xiguagame"))
