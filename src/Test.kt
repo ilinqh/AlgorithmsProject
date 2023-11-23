@@ -1,3 +1,4 @@
+import medium._1410HtmlEntityParser
 import medium._2304MinimumPathCostInAGrid
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -87,7 +88,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2304MinimumPathCostInAGrid.Solution()
+    val solution = _1410HtmlEntityParser.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -172,8 +173,8 @@ fun main() {
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
-    val solve = solution.minPathCost(
-        arrayOf(intArrayOf(5,1,2), intArrayOf(4,0,3)/*, intArrayOf(2, 1)*/),
+    val solve = solution.entityParser("x &gt; y &amp;&amp; x &lt; y is always false"
+        /*arrayOf(intArrayOf(5,1,2), intArrayOf(4,0,3)*//*, intArrayOf(2, 1)*//*),
         arrayOf(
             intArrayOf(12,10,15),
             intArrayOf(20,23,8),
@@ -181,7 +182,7 @@ fun main() {
             intArrayOf(8,1,13),
             intArrayOf(9,10,25),
             intArrayOf(5,3,2)
-        )
+        )*/
     )
 //    printResult(md5("abcdefghj123456789xiguagame"))
 //    val a = 1.inv()
