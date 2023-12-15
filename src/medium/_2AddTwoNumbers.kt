@@ -91,4 +91,35 @@ class _2AddTwoNumbers {
             return head.next
         }
     }
+
+    class OtherSolution {
+        fun addTwoNumbers(l1: ListNode?, l2: ListNode?): ListNode? {
+            var tempL1 = l1
+            var tempL2 = l2
+            val preHead = ListNode(-1)
+            var prev = preHead
+            var sum: Int = 0
+
+            while (tempL1 != null || tempL2 != null) {
+                tempL1?.let {
+                    sum += it.`val`
+                    tempL1 = it.next
+                }
+                tempL2?.let {
+                    sum += it.`val`
+                    tempL2 = it.next
+                }
+                prev.next = ListNode(sum % 10)
+                prev = prev.next!!
+                sum /= 10
+            }
+
+            if (sum > 0) {
+                prev.next = ListNode(sum)
+            }
+
+            return preHead.next
+        }
+    }
+
 }
