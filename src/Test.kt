@@ -1,3 +1,4 @@
+import easy._2129CapitalizeTheTitle
 import easy._2697LexicographicallySmallestPalindrome
 import easy._2706BuyTwoChocolates
 import easy._2824CountPairsWhoseSumIsLessThanTarget
@@ -94,7 +95,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2575FindTheDivisibilityArrayOfAString.Solution()
+    val solution = _2129CapitalizeTheTitle.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -179,9 +180,8 @@ fun main() {
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
-    val solve = solution.divisibilityArray(
-        "998244353",
-        3
+    val solve = solution.capitalizeTitle(
+        "capiTalIze tHe titLe",
     //        intArrayOf()
 //        "seven"
     //        listOf(-6,2,5,-2,-7,-1,3), -2
