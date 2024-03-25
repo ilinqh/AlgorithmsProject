@@ -1,14 +1,6 @@
-import easy._2129CapitalizeTheTitle
-import easy._2697LexicographicallySmallestPalindrome
-import easy._2706BuyTwoChocolates
-import easy._2824CountPairsWhoseSumIsLessThanTarget
-import medium._1276NumberOfBurgersWithNoWasteOfIngredients
-import medium._1410HtmlEntityParser
-import medium._2575FindTheDivisibilityArrayOfAString
-import medium._LCP_30P0NxJO
+import medium._518CoinChangeIi
 import java.math.BigInteger
 import java.security.MessageDigest
-import java.util.Collections
 
 fun printResult(solve: Any?) {
     solve ?: return
@@ -95,7 +87,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2129CapitalizeTheTitle.Solution()
+    val solution = _518CoinChangeIi.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -180,11 +172,11 @@ fun main() {
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
-    val solve = solution.capitalizeTitle(
-        "capiTalIze tHe titLe",
-    //        intArrayOf()
+    val solve = solution.change(
+        5,
+        intArrayOf(1, 2, 5)
 //        "seven"
-    //        listOf(-6,2,5,-2,-7,-1,3), -2
+        //        listOf(-6,2,5,-2,-7,-1,3), -2
         /*"x &gt; y &amp;&amp; x &lt; y is always false"*/
         /*arrayOf(intArrayOf(5,1,2), intArrayOf(4,0,3)*//*, intArrayOf(2, 1)*//*),
         arrayOf(
