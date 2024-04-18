@@ -1,3 +1,4 @@
+import medium._2007FindOriginalArrayFromDoubledArray
 import medium._518CoinChangeIi
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -87,7 +88,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _518CoinChangeIi.Solution()
+    val solution = _2007FindOriginalArrayFromDoubledArray.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -172,9 +173,9 @@ fun main() {
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
-    val solve = solution.change(
-        5,
-        intArrayOf(1, 2, 5)
+    val solve = solution.findOriginalArray(
+//        5,
+        intArrayOf(1,3,4,2,6,8)
 //        "seven"
         //        listOf(-6,2,5,-2,-7,-1,3), -2
         /*"x &gt; y &amp;&amp; x &lt; y is always false"*/
