@@ -1,5 +1,6 @@
 import easy._2278PercentageOfLetterInString
 import medium._2610ConvertAnArrayIntoA2dArrayWithConditions
+import medium._416PartitionEqualSubsetSum
 import medium._670MaximumSwap
 import java.math.BigInteger
 import java.security.MessageDigest
@@ -89,7 +90,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _2278PercentageOfLetterInString.Solution()
+    val solution = _416PartitionEqualSubsetSum.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -174,10 +175,11 @@ fun main() {
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
-    val solve = solution.percentageLetter(
+    val solve = solution.canPartition(
+        intArrayOf(1, 5, 5, 11)
 //        98368
     //        intArrayOf(1, 2, 3, 4)
-        "ooooar", 'o'
+//        "ooooar", 'o'
 //        1, 1, 8, 8, 2, 3
 //        intArrayOf(84,49,5,24,70,77,87,8),
 //        3
