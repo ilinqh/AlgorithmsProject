@@ -8,7 +8,7 @@ class _748ShortestCompletingWord {
             for (i in licensePlate.indices) {
                 val ch = licensePlate[i]
                 if (Character.isLetter(ch)) {
-                    cnt[ch.toLowerCase() - 'a'] += 1
+                    cnt[ch.lowercaseChar() - 'a'] += 1
                 }
             }
             for (i in words.indices) {

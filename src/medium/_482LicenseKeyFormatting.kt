@@ -9,7 +9,7 @@ class _482LicenseKeyFormatting {
             for (i in (s.length - 1) downTo 0) {
                 if (s[i] != '-') {
                     cnt += 1
-                    sb.append(s[i].toUpperCase())
+                    sb.append(s[i].uppercase())
                     if (cnt % k == 0) {
                         sb.append('-')
                     }

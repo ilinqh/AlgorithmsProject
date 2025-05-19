@@ -13,7 +13,7 @@ class _125ValidPalindrome {
                     right -= 1
                 }
                 if (left < right) {
-                    if (s[left].toLowerCase() != s[right].toLowerCase()) {
+                    if (s[left].lowercase() != s[right].lowercase()) {
                         return false
                     }
                     left += 1
