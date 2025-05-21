@@ -1,6 +1,7 @@
 import easy._2278PercentageOfLetterInString
 import easy._3024TypeOfTriangle
 import medium._2610ConvertAnArrayIntoA2dArrayWithConditions
+import medium._3356ZeroArrayTransformationIi
 import medium._416PartitionEqualSubsetSum
 import medium._670MaximumSwap
 import java.math.BigInteger
@@ -91,7 +92,7 @@ fun main() {
     root.left = leftNode
     leftNode.right = rightNode
 
-    val solution = _3024TypeOfTriangle.Solution()
+    val solution = _3356ZeroArrayTransformationIi.Solution()
     val firstListNode = intArrayOf(1, 4, 3, 2, 5, 2).toListNode() ?: ListNode(1)
     val secondListNode = intArrayOf(1, 3, 4).toListNode() ?: ListNode(1)
     val thirdListNode = intArrayOf(2, 6).toListNode() ?: ListNode(1)
@@ -176,8 +177,8 @@ fun main() {
 //    [[0,0],[1,1],[2,2],[3,4],[3,5],[4,4],[4,5]]
     // [5,3],[4,0],[2,1]
     // [9,8],[1,5],[10,12],[18,6],[2,4],[14,3]
-    val solve = solution.triangleType(
-        intArrayOf(1, 15, 5)
+    val solve = solution.minZeroArray(
+        intArrayOf(4, 3, 2, 1), arrayOf(intArrayOf(1, 3, 2), intArrayOf(0, 2, 1))
 //        98368
     //        intArrayOf(1, 2, 3, 4)
 //        "ooooar", 'o'
